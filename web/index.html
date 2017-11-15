@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+<script src="app.js"></script>
+<script src="./controllers/searchCtrl.js"></script>
+<script src="./controllers/listCtrl.js"></script>
+<script src="./controllers/detailsCtrl.js"></script>
+<script src="./services/searchService.js"></script>
+<script src="./services/listService.js"></script>
+<script src="./services/detailsService.js"></script>
+
+<link rel="stylesheet" href="style.css" />
+
+<body ng-app="myApp" style="background:lightcyan">
+    <ul>
+        <li><a id='search' class="active" href="#!search">SEARCH</a></li>
+        <li><a id='history' href="#!list">HISTORY</a></li>
+        <li><a id='contact' href="#contact">CONTACT</a></li>
+        <li><a id='about' href="#about">ABOUT</a></li>
+    </ul>
+    <div ng-view></div>
+</body>
+
+</html>

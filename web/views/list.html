@@ -1,0 +1,20 @@
+
+<div ng-if="searchResult">
+    <div style="margin-top:40px;margin-left:25%;width:60%;padding:10px;border:1px solid lightgray;background:lightgray;">
+        <h2 style="margin-left:30%;">Search History</h2>
+        <div style="margin-bottom:5px;margin-left:25%;width:50%;padding:5px;border:1px solid green;background:lightblue;" ng-repeat="searchObject in searchResult">
+
+            <a style="text-decoration: none;" href="#!details/{{searchObject._id}}">
+                <div style="cursor:pointer;text-decoration: none;">
+                    <div> Keywords:
+                        <i style="color:red">{{searchObject.searchKeyword}}</i>
+                    </div>
+                    <div> Search Date:
+                        <i style="color:red">{{searchObject.createdAt.substring(0,10)}}</i>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<h5 style="display:block; width:130px;padding:10px;margin-left:35%;border:2px solid red ; color :red" ng-if="!searchResult">No Data Found</h5>

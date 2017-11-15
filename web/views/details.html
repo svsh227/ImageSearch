@@ -1,0 +1,20 @@
+
+<div ng-if="searchResult">
+    <div style="margin-top:20px;margin-bottom:10px;margin-left:10%;width:80%;padding:20px;">
+        <H3>Details of Search</H3>
+        <div>
+            <div> Keyword:
+                <i style="color:red">{{searchResult.searchKeyword}}</i>
+            </div>
+            <div style="margin-top:20px;">
+                <div ng-repeat="url in searchResult.searchUrls">
+                    <div style="margin-left:8%">
+                        <img style="display:block; width:200px;height:200px;padding:20px;border:2px solid lightgray;float:left;margin-left: 2%;margin-right: 8px;margin-top: 8px;"
+                            src="{{url}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<h5 style="display:block; width:357px;padding:20px;;margin-left:32%;border:2px solid red ; color :red" ng-if="!isError">No image were there in result</h5>
