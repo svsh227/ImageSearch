@@ -4,7 +4,7 @@ var userModule = require('../models/user/index');
 var searchModule = require('../models/search/index');
 var async = require('async');
 const GoogleImages = require('google-images');
-const client = new GoogleImages('016977588057462682029:fs6wtrauzts', 'AIzaSyDddhxThyYShQIOtMWaF8v-meFz_m1OeDw');
+const client = new GoogleImages('CSE_ID', 'YOUR_API_KEY');
 var UserModel = require('../models/user/models/userModels');
 var js = require('jsearch')
 
